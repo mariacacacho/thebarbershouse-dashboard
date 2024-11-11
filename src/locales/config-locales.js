@@ -45,4 +45,9 @@ export const changeLangMessages = {
     error: 'خطأ في تغيير اللغة!',
     loading: 'جارٍ التحميل...',
   },
+  es: {
+    success: 'El idioma ha cambiado',
+    error: 'Error al cambiar el idioma!',
+    loading: 'Cargando...',
+  },
 };
