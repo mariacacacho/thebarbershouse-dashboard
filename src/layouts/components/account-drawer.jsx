@@ -111,7 +111,7 @@ export function AccountDrawer({ data = [], sx, ...other }) {
 
           <Stack direction="row" spacing={1} flexWrap="wrap" justifyContent="center" sx={{ p: 3 }}>
             {[...Array(3)].map((_, index) => (
-              <Tooltip key={_mock.fullName(index + 1)} title={`Change avatar`}>
+              <Tooltip key={_mock.fullName(index + 1)} title="Change avatar">
                 <Avatar
                   alt={_mock.fullName(index + 1)}
                   src={_mock.image.avatar(index + 1)}

@@ -51,7 +51,7 @@ export function OverviewAppView() {
 
         <Grid xs={12} md={4}>
           <AppWidgetSummary
-            title="Total active users"
+            title="Total Clientes"
             percent={2.6}
             total={18765}
             chart={{
@@ -63,7 +63,7 @@ export function OverviewAppView() {
 
         <Grid xs={12} md={4}>
           <AppWidgetSummary
-            title="Total installed"
+            title="Total productos"
             percent={0.2}
             total={4876}
             chart={{
@@ -76,7 +76,7 @@ export function OverviewAppView() {
 
         <Grid xs={12} md={4}>
           <AppWidgetSummary
-            title="Total downloads"
+            title="Total servicios realizados"
             percent={-0.1}
             total={678}
             chart={{
@@ -89,14 +89,14 @@ export function OverviewAppView() {
 
         <Grid xs={12} md={6} lg={4}>
           <AppCurrentDownload
-            title="Current download"
-            subheader="Downloaded by operating system"
+            title="Monetario"
+            subheader="Total en ventas de servicios"
             chart={{
               series: [
-                { label: 'Mac', value: 12244 },
-                { label: 'Window', value: 53345 },
-                { label: 'iOS', value: 44313 },
-                { label: 'Android', value: 78343 },
+                { label: 'Barba', value: 12244 },
+                { label: 'Corte', value: 53345 },
+                { label: 'Mascarilla', value: 44313 },
+                { label: 'Servicio completo', value: 78343 },
               ],
             }}
           />
@@ -104,8 +104,8 @@ export function OverviewAppView() {
 
         <Grid xs={12} md={6} lg={8}>
           <AppAreaInstalled
-            title="Area installed"
-            subheader="(+43%) than last year"
+            title="Monetario"
+            subheader="Total en venta de productos"
             chart={{
               categories: [
                 'Jan',
@@ -125,8 +125,8 @@ export function OverviewAppView() {
                 {
                   name: '2022',
                   data: [
-                    { name: 'Asia', data: [12, 10, 18, 22, 20, 12, 8, 21, 20, 14, 15, 16] },
-                    { name: 'Europe', data: [12, 10, 18, 22, 20, 12, 8, 21, 20, 14, 15, 16] },
+                    { name: 'Gel', data: [12, 10, 18, 22, 20, 12, 8, 21, 20, 14, 15, 16] },
+                    { name: 'Shampoo', data: [12, 10, 18, 22, 20, 12, 8, 21, 20, 14, 15, 16] },
                     { name: 'Americas', data: [12, 10, 18, 22, 20, 12, 8, 21, 20, 14, 15, 16] },
                   ],
                 },
@@ -153,50 +153,20 @@ export function OverviewAppView() {
 
         <Grid xs={12} lg={8}>
           <AppNewInvoice
-            title="New invoice"
+            title="Clientes recientes"
             tableData={_appInvoices}
             headLabel={[
               { id: 'id', label: 'Invoice ID' },
-              { id: 'category', label: 'Category' },
-              { id: 'price', label: 'Price' },
-              { id: 'status', label: 'Status' },
+              { id: 'category', label: 'Nombre' },
+              { id: 'price', label: 'Valor de venta' },
+              { id: 'status', label: 'Fecha' },
               { id: '' },
             ]}
           />
         </Grid>
 
         <Grid xs={12} md={6} lg={4}>
-          <AppTopRelated title="Related applications" list={_appRelated} />
-        </Grid>
-
-        <Grid xs={12} md={6} lg={4}>
-          <AppTopInstalledCountries title="Top installed countries" list={_appInstalled} />
-        </Grid>
-
-        <Grid xs={12} md={6} lg={4}>
-          <AppTopAuthors title="Top authors" list={_appAuthors} />
-        </Grid>
-
-        <Grid xs={12} md={6} lg={4}>
-          <Box sx={{ gap: 3, display: 'flex', flexDirection: 'column' }}>
-            <AppWidget
-              title="Conversion"
-              total={38566}
-              icon="solar:user-rounded-bold"
-              chart={{ series: 48 }}
-            />
-
-            <AppWidget
-              title="Applications"
-              total={55566}
-              icon="fluent:mail-24-filled"
-              chart={{
-                series: 75,
-                colors: [theme.vars.palette.info.light, theme.vars.palette.info.main],
-              }}
-              sx={{ bgcolor: 'info.dark', [`& .${svgColorClasses.root}`]: { color: 'info.light' } }}
-            />
-          </Box>
+          <AppTopRelated title="Cumpleaños del mes" list={_appRelated} />
         </Grid>
       </Grid>
     </DashboardContent>
